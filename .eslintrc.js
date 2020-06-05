@@ -4,22 +4,25 @@ module.exports = {
         "es6": true
     },
     "extends": [
-        "standard"
+        "standard",
+        "plugin:vue/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
-    "parser": "@typescript-eslint/parser",
+    "parser": "vue-eslint-parser",
     "parserOptions": {
+        "parser": "@typescript-eslint/parser",
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "vue"
     ],
     "rules": {
-    // disable the rule for all files
+        // disable the rule for all files
         "@typescript-eslint/explicit-function-return-type": "off"
     }
 };

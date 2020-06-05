@@ -7,3 +7,7 @@ Template for my addons. Currently it supports...
 - npm + typescript + webpack setup for bundling JS codes.
 
 This repo serves as a template repo for most of my addons.
+
+## vuedlg
+
+Template for addon that requires displaying [Vue.js](vuejs.org) based dialog on some `AnkiWebView` instance.
