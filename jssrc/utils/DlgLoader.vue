@@ -3,7 +3,7 @@
   component(v-if='dlgClass', :is='dlgClass', v-bind='$props', @close='$emit("close")')
 </template>
 
-<script>
+<script lang='ts'>
 import Vue from 'vue'
 export default Vue.extend({
   props: {
