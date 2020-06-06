@@ -1,5 +1,5 @@
 const path = require('path')
-const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   entry: {
@@ -19,7 +19,7 @@ module.exports = {
         test: /\.ts$/,
         loader: 'ts-loader',
         options: {
-          appendTsSuffixTo: [/\.vue$/],
+          appendTsSuffixTo: [/\.vue$/]
         }
       },
       {
@@ -38,7 +38,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           'vue-style-loader',
-          'css-loader',
+          'css-loader'
         ]
       },
       {
