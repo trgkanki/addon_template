@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
+
 import Vue from 'vue'
 import DlgLoader from './DlgLoader.vue'
 

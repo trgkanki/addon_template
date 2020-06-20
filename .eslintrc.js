@@ -3,9 +3,30 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: [
-    'standard',
-    'plugin:vue/recommended'
+  overrides: [
+    {
+      files: ['*.js', '*.jsx'],
+      extends: [
+        'standard',
+        'plugin:vue/recommended'
+      ]
+    },
+    {
+      files: ['*.ts', '*.tsx'],
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'standard',
+        'plugin:vue/recommended'
+      ],
+      rules: {
+        // disable the rule for all files
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        'no-undef': 'off'
+      }
+    }
   ],
   globals: {
     Atomics: 'readonly',
@@ -20,8 +41,5 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'vue'
-  ],
-  rules: {
-    '@typescript-eslint/explicit-function-return-type': 'off'
-  }
+  ]
 }
