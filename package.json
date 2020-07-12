@@ -65,7 +65,7 @@
     "*.{js,ts}": [
       "eslint --fix"
     ],
-    "*.{py}": [
+    "*.py": [
       "black"
     ],
     "*.{scss,css}": [
