@@ -8,6 +8,7 @@ import os
 
 from .configrw import getCurrentAddonName
 from .resource import readResource, getResourcePath
+from aqt.utils import showText
 
 
 def getCurrentAddonVersion():
@@ -19,14 +20,14 @@ def showChangelogOnUpdate():
     addonName = getCurrentAddonName()
 
     addonMeta = mw.addonManager.addonMeta(addonName)
-    if addonMeta["human_version"] != addonVersion:
+    if addonMeta.get("human_version", None) != addonVersion:
         addonMeta["human_version"] = addonVersion
-        mw.addonManager.writeAddonMeta(addonMeta)
+        mw.addonManager.writeAddonMeta(addonName, addonMeta)
 
         changelogPath = getResourcePath("CHANGELOG.html")
         if os.path.exists(changelogPath):
             with noBundledLibs():
-                QDesktopServices.openUrl(QUrl.fromLocalFile(changelogPath))
+                showText(readResource("CHANGELOG.html"), type="html", title="Changelog")
 
 
 showChangelogOnUpdate()
