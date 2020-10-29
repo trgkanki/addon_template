@@ -1,5 +1,11 @@
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const webpack = require('webpack')
+const fs = require('fs')
+
+function getAddonUUID () {
+  return fs.readFileSync('src/UUID', { encoding: 'utf-8' }).trim()
+}
 
 module.exports = {
   entry: {
@@ -54,6 +60,9 @@ module.exports = {
     extensions: ['.js', '.ts', '.vue']
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new webpack.DefinePlugin({
+      ADDON_UUID: JSON.stringify(getAddonUUID())
+    })
   ]
 }

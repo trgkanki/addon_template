@@ -1,6 +1,10 @@
 {
-  "python.linting.enabled": true,
-  "cSpell.words": [
-    "jssrc"
-  ]
+  "workbench.colorCustomizations": {
+    "[Dracula]": {
+      "gitDecoration.ignoredResourceForeground": "#666"
+    },
+    "activityBar.background": "#16340E",
+    "titleBar.activeBackground": "#1E4913",
+    "titleBar.activeForeground": "#F7FCF5"
+  }
 }
