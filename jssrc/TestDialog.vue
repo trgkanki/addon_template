@@ -18,7 +18,8 @@ export default {
 .dlgMain {
   width: 500px;
   height: 500px;
-  border: 1px solid black;
+  border: 1px solid #000;
   padding: 1em;
+  box-sizing: border-box;
 }
 </style>

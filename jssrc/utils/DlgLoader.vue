@@ -38,7 +38,7 @@ export default Vue.extend({
 .modal-background > * {
   margin: auto;
   transform: translateY(-50%);
-  background: white;
+  background: #fff;
 }
 
 .nightMode .modal-background > * {
