@@ -52,13 +52,12 @@
     "vue": "^2.6.12",
     "vue-loader": "^15.9.2",
     "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
   },
   "husky": {
     "hooks": {
       "pre-commit": "git-branch-is --not master && lint-staged"
     }
-  },
-  "dependencies": {}
+  }
 }
